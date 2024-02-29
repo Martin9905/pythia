@@ -1,16 +1,59 @@
+.pythia {
+  background-color: #3b3b3b;
+}
+
+.header {
+  display: flex;
+  align-items: center; /* Centra los elementos verticalmente */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  background-color: rgba(0, 0, 0, 0.931); /* Fondo negro */
+  color: white; /* Texto blanco */
+  font-family: 'Biome', sans-serif;
+  padding: 20px; /* Espaciado interno */
+  font-size: 50px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center; /* Centra los elementos verticalmente */
+}
+
+.app-logo {
+  max-width: 150px;
+  margin-right: 10px; /* Espacio entre el logo y el nombre de la aplicación */
+}
+
+.app-name {
+  color: white;
+  font-family: 'Biome', sans-serif;
+  font-size: 50px;
+}
+
 .chat-container {
   display: flex;
   flex-direction: column;
+  align-items: center; /* Alinea el chat-container a la derecha */
+  height: 800px;
+  padding: 20px;
+  border: 2px solid rgb(47, 47, 47); /* Agrega un borde de color negro */
+  border-radius: 20px; /* Bordes redondeados */
+  margin-bottom: 20px; /* Espacio entre el chat-container y el input-container */
+  margin-left: 250px; /* Margen izquierdo de 50px */
+  margin-right: 250px; /* Margen derecho de 50px */
+  margin-top: 20px;
+  background-color: white;
 }
 
 .messages {
-  display: flex;
-  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .message {
   display: flex;
-  justify-content: flex-end; /* Alinea los mensajes enviados a la derecha */
+  justify-content: flex-end; 
   margin-bottom: 10px;
 }
 
@@ -19,28 +62,54 @@
 }
 
 .message.received {
-  justify-content: flex-start; /* Alinea los mensajes recibidos a la izquierda */
+  justify-content: flex-start; 
 }
 
 .sent-message {
-  background-color: #dcf8c6; /* Color de fondo para mensajes enviados */
+  background-color: #3e3e3e;
   border-radius: 10px;
   padding: 10px;
+  color: white;
+  font-size: 50px;
 }
 
 .received-message {
-  background-color: #f0f0f0; /* Color de fondo para mensajes recibidos */
+  background-color: #b6ff9e;
   border-radius: 10px;
   padding: 10px;
+  font-size: 50px;
 }
 
 .input-container {
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  padding: 10px;
+  background-color: rgb(84, 84, 84); /* Fondo negro */
+  border-radius: 20px; /* Bordes redondeados */
+  margin-bottom: 50px; /* Espacio entre el chat-container y el input-container */
+  margin-left: 250px; /* Margen izquierdo automático para alejarlo hacia la derecha */
+  margin-right: 250px; /* Margen derecho de 50px */
 }
 
 .input-container input {
   flex: 1;
   margin-right: 10px;
+  padding: 15px; /* Ajusta el tamaño del input */
+  border-radius: 20px; /* Bordes redondeados */
+  font-size: 20px;
 }
+
+.input-container button {
+  margin-left: 10px;
+}
+
+/* Cambia el tamaño del texto del placeholder */
+::placeholder {
+  font-size: 30px; /* Tamaño deseado del texto del placeholder */
+}
+
+/* También puedes especificar estilos específicos para el input si lo deseas */
+.input-container input::placeholder {
+  font-size: 30px; /* Tamaño deseado del texto del placeholder */
+}
+
