@@ -38,7 +38,7 @@ export class ChatComponent {
       "model": {
         "stop_sequences": [],
         "name": "anthropic.claude-v2",
-        "max_tokens": 300,
+        "max_tokens": 3000,
         "temperature": 1,
         "top_k": 250,
         "top_p": 0.999

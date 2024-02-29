@@ -1,48 +1,46 @@
 .chat-container {
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    height: 300px;
-    overflow-y: scroll;
-  }
-  
-  .messages {
-    margin-bottom: 10px;
-  }
-  
-  .message {
-    background-color: #dcdcdc;
-    padding: 5px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    animation: colorchange 45s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-play-state: running;
-  }
+  display: flex;
+  flex-direction: column;
+}
 
-  
-  
-  .input-container {
-    display: flex;
-  }
-  
-  .input-container input {
-    flex: 1;
-    margin-right: 10px;
-  }  
-  .input-container button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .input-container button:hover {
-    background-color: #0056b3;
-  }
-  .input-container button:disabled {
-    background-color: #ccc;
-  }
+.messages {
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  display: flex;
+  justify-content: flex-end; /* Alinea los mensajes enviados a la derecha */
+  margin-bottom: 10px;
+}
+
+.message.sent {
+  justify-content: flex-end;
+}
+
+.message.received {
+  justify-content: flex-start; /* Alinea los mensajes recibidos a la izquierda */
+}
+
+.sent-message {
+  background-color: #dcf8c6; /* Color de fondo para mensajes enviados */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.received-message {
+  background-color: #f0f0f0; /* Color de fondo para mensajes recibidos */
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.input-container input {
+  flex: 1;
+  margin-right: 10px;
+}
