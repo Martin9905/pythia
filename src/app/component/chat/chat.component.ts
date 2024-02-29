@@ -20,13 +20,14 @@ export class ChatComponent {
 
   constructor(private http: HttpClient) {
   }
-
   messages: string[] = [];
   newMessage: string = '';
   jarvisResponse:any;
+  toggle = false;
 
   
   sendMessage2() {
+    this.toggle = !this.toggle;  
     const headers = {'Content-Type': 'application/json', 
     'private_key': '56c5c6db-0d14-4bb7-a474-1bb996baec0f',
     'app_id': 'com.payu-hackathon.pythia'}  
@@ -57,7 +58,9 @@ export class ChatComponent {
    },
       (error) => { console.log(error); });
      
+      
     }
+
     
   }
 

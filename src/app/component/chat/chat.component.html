@@ -1,12 +1,18 @@
 <div class="chat-container">
     <div class="messages">
+      
       <div *ngFor="let message of messages" class="message">
-        {{ message }}
+        <div>
+          {{ message }}
+        </div>
+        
       </div>
     </div>
     <div class="input-container">
       <input type="text" [(ngModel)]="newMessage" placeholder="Escribe tu mensaje aquí..." (keyup.enter)="sendMessage2()">
-      <button (click)="sendMessage2()">Enviar</button>
+      <button class="btn btn-primary" [disabled]="newMessage === ''" (click)="sendMessage2()">Enviar</button>
+
     </div>
+
 </div>
   
