@@ -54,6 +54,7 @@ export class ChatComponent {
     this.http.post(this.baseURL, body,{'headers':headers}).subscribe(
       (response) => {
         this.jarvisResponse=response as responseJarvis
+        this.jarvisResponse.result=this.jarvisResponse.result.replaceAll('-', '\n-')
         this.messages.push(this.jarvisResponse.result);
    },
       (error) => { console.log(error); });
