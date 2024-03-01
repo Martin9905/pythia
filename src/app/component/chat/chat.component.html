@@ -1,18 +1,25 @@
-<div class="chat-container">
-  <div class="messages">
-    <div *ngFor="let message of messages; let i = index" class="message" [ngClass]="{ 'sent': i % 2 === 0, 'received': i % 2 !== 0 }">
-      <div *ngIf="i % 2 === 0" class="sent-message">
-        {{ message }}
-      </div>
-      <div *ngIf="i % 2 !== 0" class="received-message">
-        {{ message }}
+<div class="pythia">
+  <div class="header">
+    <div class="logo-container">
+      <img src="../../assets/imgs/logotransparent.png" alt="Logo de la aplicacion" class="app-logo"> 
+      <div class="app-name">PYTHI.A</div>
+    </div>
+  </div>
+  <div class="chat-container">
+    <div class="messages">
+      <div *ngFor="let message of messages; let i = index" class="message" [ngClass]="{ 'sent': i % 2 === 0, 'received': i % 2 !== 0 }">
+        <div *ngIf="i % 2 === 0" class="sent-message">
+          {{ message }}
+        </div>
+        <div *ngIf="i % 2 !== 0" class="received-message">
+         {{ message }}
+        </div>
       </div>
     </div>
   </div>
   <div class="input-container">
-    <input type="text" [(ngModel)]="newMessage" placeholder="Escribe tu mensaje aquí..." (keyup.enter)="sendMessage2()">
-    <button class="btn btn-primary" [disabled]="newMessage === ''" (click)="sendMessage2()">Enviar</button>
+    <input type="text" [(ngModel)]="newMessage" placeholder="Hi! Im Pythi.a your virtual oracle, how can i help you today?..." (keyup.enter)="sendMessage2()">
+    <button class="btn btn-primary" [disabled]="newMessage === ''" (click)="sendMessage2()">Send Message</button>
   </div>
-</div>
-
   
+</div>
